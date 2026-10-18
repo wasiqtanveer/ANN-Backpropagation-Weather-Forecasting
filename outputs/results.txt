@@ -1,0 +1,8 @@
+Samples: train 49059, val 10513, test 10513
+Inputs (4): pressure_mbar, temp_c, humidity_pct, wind_speed_ms
+Architecture: [4, 16, 8, 1], tanh hidden, linear output, lr=0.01, momentum=0.9, batch=128, epochs=60
+Forecast horizon: 6 hours
+
+Model                            MSE    RMSE     MAE      R2
+ANN (backprop)                12.297   3.507   2.692   0.797
+Baseline (same as now)        16.117   4.015   3.013   0.734

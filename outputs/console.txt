@@ -1,0 +1,19 @@
+epoch   0  train MSE 1.0389  val MSE 0.9318
+epoch   1  train MSE 0.1971  val MSE 0.2076
+epoch  11  train MSE 0.1886  val MSE 0.2013
+epoch  21  train MSE 0.1857  val MSE 0.1978
+epoch  31  train MSE 0.1872  val MSE 0.2000
+epoch  41  train MSE 0.1867  val MSE 0.1986
+epoch  51  train MSE 0.1859  val MSE 0.1977
+epoch  60  train MSE 0.1870  val MSE 0.2004
+
+Samples: train 49059, val 10513, test 10513
+Inputs (4): pressure_mbar, temp_c, humidity_pct, wind_speed_ms
+Architecture: [4, 16, 8, 1], tanh hidden, linear output, lr=0.01, momentum=0.9, batch=128, epochs=60
+Forecast horizon: 6 hours
+
+Model                            MSE    RMSE     MAE      R2
+ANN (backprop)                12.297   3.507   2.692   0.797
+Baseline (same as now)        16.117   4.015   3.013   0.734
+
+Saved plots and results.txt in the outputs folder
